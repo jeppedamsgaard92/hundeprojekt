@@ -1,2 +1,42 @@
-$padding-sides: 20px;
-$background-color: yellow; 
+$padding-sides-L: 200px;
+$padding-sides-M: 100px;
+$padding-sides-S: 20px;
+ 
+
+@mixin flex-column-text ($justify-content:center, $align-items:center) {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+@mixin cta ($color:white, $bg-color:black) {
+    color: $color;
+    background-color: $bg-color;
+    width: fit-content;
+    padding: 10px 30px 10px 30px;
+    white-space: nowrap;
+    text-decoration: none;
+    border-radius: 5px;
+
+        &:hover {
+            background-color: $color;
+            color: $bg-color;
+        }
+}
+
+@mixin nav-cta ($color:white, $hover-color:black) {
+    color: $color;
+    text-decoration: none;
+
+    font-size: 1.25rem;
+    font-family: "Kodchasan", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+
+
+        &:hover {
+            color: $hover-color;
+        }
+}
